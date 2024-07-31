@@ -1,13 +1,18 @@
-pipeline{
+pipeline
+{
     agent any
-    tools {
+    tools 
+    {
         maven 'Maven'
     }
-        stage('compile') {
-            steps {
+    stages{
+        stage('compile') 
+    {
+            steps 
+        {
                 bat "mvn compile"
             }
-        }
+    }
         stage('test') {
             steps {
                 bat "mvn test"
